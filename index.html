@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SpendWise</h1>
+        <p>Manage your money wisely</p>
+    </header>
+
+    <main class="container">
+
+        <section class="budget-section">
+            <h2>Budget Summary</h2>
+
+            <div class="summary">
+                <div class="card">
+                    <h3>Total Budget</h3>
+                    <p id="totalBudget">KSh 20000.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="totalExpenses">KSh 5000.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Remaining Balance</h3>
+                    <p id="remainingBalance">KSh 15000.00</p>
+                </div>
+            </div>
+
+            <p id="budgetMessage">
+                Great! You are within your budget.
+            </p>
+        </section>
+
+        <section class="expense-section">
+            <h2>Add New Expense</h2>
+
+            <form id="expenseForm">
+                <label for="expenseName">Expense Name</label>
+                <input
+                    type="text"
+                    id="expenseName"
+                    placeholder="Enter expense name"
+                    required
+                >
+
+                <label for="expenseAmount">Amount (KSh)</label>
+                <input
+                    type="number"
+                    id="expenseAmount"
+                    placeholder="Enter amount"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="records-section">
+            <h2>Expense Records</h2>
+            <ul id="expenseList">
+                <li>Food - KSh 5000.00</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SpendWise Budget Tracker &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
